@@ -8,4 +8,7 @@ const sql = new sequelize(db_config.name, db_config.user, db_config.password, {
     "dialect": 'mysql'
 });
 
-module.exports = sql;
+module.exports = {
+    sql: sql,
+    sequelize: sequelize
+};

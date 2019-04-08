@@ -1,27 +1,29 @@
-const sql = require('../modules/sql');
+const db = require('../modules/sql');
 
-const Books_schema = sql.define('Books', {
+const Books_schema = db.sql.define('Books', {
     /****
      * we have id as primary key
      */
     id: {
-        type: sequelize.DataTypes.INT,
+        type: db.sequelize.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     title: {
-        type: sequelize.DataTypes.STRING,
+        type: db.sequelize.DataTypes.STRING,
         unique: true
     },
     author: {
-        type: sequelize.DataTypes.STRING
+        type: db.sequelize.DataTypes.STRING
     },
     year: {
-        type: sequelize.DataTypes.INT
+        type: db.sequelize.DataTypes.INTEGER
     },
     pages: {
-        type: sequelize.DataTypes.INT
+        type: db.sequelize.DataTypes.INTEGER
     }
+},{
+    timesamps: true
 },{
     /****
      * disable the modification of table names; By default, sequelize will automatically

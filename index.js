@@ -10,9 +10,10 @@ const config = require('config');
  */
 const app = express();
 app.use(body_parser.json());
-app.use(body_parser.urlencoded({extended: true}));               
-app.use(body_parser.text());                                    
-app.use(body_parser.json({ type: 'application/json'}));
+/***
+ * we will use only JSON
+ * postman: set request body to json, and set the name: value pairs. Use " " for string values
+ */
 
 /***
  * get the routes from router.js
