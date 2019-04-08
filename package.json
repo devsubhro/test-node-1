@@ -1,0 +1,31 @@
+{
+  "name": "test-node-1",
+  "version": "1.0.0",
+  "description": "a simple app for writing tests with mocha and chai",
+  "main": "index.js",
+  "scripts": {
+    "start": "SET NODE_ENV=dev && node index.js",
+    "test": "mocha --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsubhro/test-node-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsubhro/test-node-1/issues"
+  },
+  "homepage": "https://github.com/devsubhro/test-node-1#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "config": "^3.1.0",
+    "express": "^4.16.4",
+    "sequelize": "^5.2.12"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.1.1"
+  }
+}
