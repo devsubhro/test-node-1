@@ -48,6 +48,38 @@ module.exports = {
         }
     },
 
+    editBook: async (req, resp) => {
+        try {
+            const num_rows_updated = await Books.update(
+                req.body,
+                {
+                    "where": {
+                        "id": req.body.id
+                    }
+                }
+            );
+            if(!num_rows_updated) {
+                resp.status(200).send({
+                    "updated": 0,
+                    "error": "No rows updated"
+                });
+                return;
+            }
+            resp.status(200).send({
+                "updated": 1,
+                "error": ""
+            });
+            return;
+
+        } catch (e) {
+            resp.status(200).send({
+                "updated": 0,
+                "error": e
+            });
+            return;
+        }
+    },
+
     removeBook: async (req, resp) => {
         try {
             const books = await Books.destroy({

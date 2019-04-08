@@ -6,5 +6,6 @@ module.exports = (app) => {
     app.get("/books", BooksController.getAll);
     app.get("/books/view/:book_id", BooksController.getBook);
     app.post("/books/add", BooksController.addBook);
+    app.post("/books/edit/", BooksController.editBook);
     app.delete("/books/remove/:book_id", BooksController.removeBook);
 };

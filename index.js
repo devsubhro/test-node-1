@@ -10,6 +10,7 @@ const config = require('config');
  */
 const app = express();
 app.use(body_parser.json());
+app.use(body_parser.urlencoded({extended: true}));
 /***
  * we will use only JSON
  * postman: set request body to json, and set the name: value pairs. Use " " for string values
