@@ -1,0 +1,11 @@
+{
+    "db_config": {
+        "host": "localhost",
+        "user": "root",
+        "password": "user123",
+        "name": "node_test_1_test"
+    },
+    "server": {
+        "port": 9999
+    }
+}

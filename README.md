@@ -11,6 +11,8 @@ only for dev version (--save-dev)
 mocha
 chai
 chai-http
+sinon
+execsql
 
 To set the config
 create a folder called config

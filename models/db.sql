@@ -13,3 +13,5 @@ CHANGE `title` `title` VARCHAR(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci
 CHANGE `author` `author` VARCHAR(255) CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL DEFAULT 'unknown auther', 
 CHANGE `year` `year` INT(11) NOT NULL DEFAULT '0', 
 CHANGE `pages` `pages` INT(11) NOT NULL DEFAULT '0';
+
+--- ACHTUNG if you add any sql create/alter/delete here, remember to put that in the /models/db-test.sql
